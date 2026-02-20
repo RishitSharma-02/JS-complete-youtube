@@ -1,3 +1,4 @@
+/*
 let score = "33";
 console.log(typeof (score));
 let valueInNumber = Number(score)
@@ -33,7 +34,38 @@ let StringCon = String (someNumber);
 console.log(typeof StringCon);
 console.log(StringCon);
 
+*/
+
+// *******************Operation ****************************
 
 
+let value = 44;
+let negVal = -value;
+console.log(negVal);
 
+/*
+console.log(2+2)
+console.log(2*2)
+console.log(2**3) power
+console.log(2/2)
+*/
+let gameCounter = 34 
+gameCounter++;
+console.log(gameCounter)
 
+// prefix and postfix
+/*
+If used postfix, with operator after operand (for example, x++),
+the increment operator increments and returns the value before incrementing.
+
+If used prefix, with operator before operand (for example, ++x),
+the increment operator increments and returns the value after incrementing.
+*/
+
+let x = 44;
+let y = ++x;
+console.log(`x:${x} ,  y:${y}`);
+
+let a = 34;
+let b = a++;
+console.log(`a:${a} ,  b:${b}`);
