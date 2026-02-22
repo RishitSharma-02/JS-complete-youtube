@@ -37,3 +37,33 @@ console.log(obj4);
 // either use spread 
 const obj5 ={...obj1 , ...obj2}
 console.log(obj5);
+
+// if database se value aigi to array me atti hai like:-
+
+const user =[
+    {
+        id :100,
+        email: "user1@gmail.com",
+    },
+    {
+        id :108,
+        email: "user1@gmail.com",
+    }
+    ,
+    {
+        id :104,
+        email: "user1@gmail.com",
+    }
+    ,
+    {
+        id :107,
+        email: "user1@gmail.com",
+    }
+]
+console.log((user[1]).email);
+console.log(Object.keys(tinderUSer)); // keys in array
+console.log(Object.values(tinderUSer));//values in arrays
+console.log(Object.entries(tinderUSer));
+
+// agar janana hai ki koi property hai ki nhi tinder user ke pass then :-
+console.log(tinderUSer.hasOwnProperty('GFName'));
