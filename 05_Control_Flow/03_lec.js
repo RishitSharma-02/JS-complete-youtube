@@ -41,5 +41,23 @@ for (const key in arr2) {
 //arrays ke andar forof
 
 // for each loop 
-const coding = [ "js" , "python " , "ruby" , "rust"];
-coding.forEach()
+
+// const coding = [ "js" , "python " , "ruby" , "rust"];
+// coding.forEach( function (item) {
+//     console.log(item);
+
+// })
+
+// coding.forEach( (item) =>{
+//     console.log(item)
+// })
+
+coding.forEach( (item , index , arr ) =>{
+    console.log(item , index , arr)
+})
+
+
+
+
+
+
