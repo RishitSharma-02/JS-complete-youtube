@@ -32,3 +32,14 @@ for (const key in arr2) {
 }
 // imp observation for of me value utha raha tha and forin me key utha rha hai 
 // key in array reffer to indexing position 
+
+for (const key in arr2) {
+    console.log(arr2[key])
+    
+}
+//object keliye forin
+//arrays ke andar forof
+
+// for each loop 
+const coding = [ "js" , "python " , "ruby" , "rust"];
+coding.forEach()
