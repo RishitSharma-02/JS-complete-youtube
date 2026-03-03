@@ -42,7 +42,7 @@ for (const key in arr2) {
 
 // for each loop 
 
-// const coding = [ "js" , "python " , "ruby" , "rust"];
+const coding = [ "js" , "python " , "ruby" , "rust"];
 // coding.forEach( function (item) {
 //     console.log(item);
 
@@ -56,8 +56,31 @@ coding.forEach( (item , index , arr ) =>{
     console.log(item , index , arr)
 })
 
+//arr and obj 
+//[{}{}{}];
 
+const myObject =[
+    {
+        langName : "Python" , 
+        langForm : "19__"
 
+    } ,
+    {
+        langName :"java", 
+        langForm:"19.."
+        
+    },
+    {
+        langName :"ruby" ,
+        langForm: "20.."
+        
+    }
+]
+
+myObject.forEach((item) => {
+    console.log(item.langForm)
+
+})
 
 
 
