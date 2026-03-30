@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai and code </h1>
+    <button id="Stop">Stop</button>
+    
+</body>
+<script>
+    setTimeout(function(){
+        console.log("Rishit")
+    } ,2000);
+  const chngText = function(){
+     document.querySelector('h1').innerHTML="TEST JS SERIES"
+  };
+ const chngMe =  setTimeout(chngText,2000)
+    
+    // in situation ki hm set kiye hu event ko rokn chahate hai to kaise rokenge
+    
+    document.querySelector('#Stop').addEventListener('click',function(){
+        clearTimeout(chngMe);
+        console.log("Stop");
+
+    })
+
+
+</script>
+</html>

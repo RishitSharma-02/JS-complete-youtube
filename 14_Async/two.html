@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #41414141;">
+    <h1>Rishit Kumar Sharma </h1>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+
+    
+</body>
+<script>
+    let intervalId;
+    document.querySelector('#Start').addEventListener('click',
+        function(){
+              const sayMyName = function(){
+        console.log("Rishit")
+
+    }
+       intervalId = setInterval(sayMyName, 1000,"hi");
+        }
+    )
+    document.querySelector('#Stop').addEventListener('click' ,
+        function(){
+            
+clearInterval(intervalId);
+        }
+    )
+
+
+
+   
+  
+
+</script>
+</html>

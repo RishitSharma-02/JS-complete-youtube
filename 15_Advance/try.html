@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+  /* Add a subtle shadow for depth */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* Ensure the card has a reasonable maximum width */
+  max-width: 300px;
+  margin: auto;
+  /* Add smooth transition for hover effect */
+  transition: 0.3s;
+  width: 100%;
+  /* Optional: rounded corners */
+  border-radius: 5px; 
+}
+
+/* On hover, increase the shadow to make it seem like it is lifted */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Style the image to fit the card width */
+.card img {
+  border-radius: 5px 5px 0 0;
+}
+
+/* Add padding to the container for text content */
+.container {
+  padding: 2px 16px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="card">
+  <img src="img_avatar.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Jane Doe</b></h4>
+    <p>Architect & Engineer</p>
+  </div>
+</div>
+</body>
+<script>
+    const reqUrl = 'https://api.github.com/users/RishitSharma-02';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',reqUrl);
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+        }
+    }
+    xhr.send;
+</script>
+</html>
