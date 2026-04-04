@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+  /*
+  LEXICAL SCOPE  
+
+  function init() {
+  let name = "Mozilla"; // name is a local variable created by init
+  function displayName() {
+    // displayName() is the inner function, that forms a closure
+    console.log(name); // use variable declared in the parent function
+  }
+  displayName();
+
+  // dehko kya hoga hai ek global execution context EC bnata hai 
+  // fir jitna function hmne banaye hai sba ka alag EC bnta hai 
+  // lekin function and uske andar jo function hai ye  apse me memory share krta hai 
+  // isi ko lexical scope khte hai 
+
+}
+init();
+*/
+
+// function outer(){
+//     let username = "hitesh"
+
+//     function inner1(){
+//         let secret = "513";
+//         console.log("inner1" , username);
+//     }
+//     function inner2 (){
+//         console.log("inner2" , username)
+//     }
+//     inner1();
+//     inner2();
+// }
+// outer() ;
+
+
+
+
+
+
+// ab hm clouser dekhte hai  
+//  Closure = function + uska outer scope ka access (even after outer function khatam ho gaya ho)
+function outer() {
+  let count = 0;
+
+  function inner() {
+    count++;
+    console.log(count);
+  }
+
+  return inner;// yaha pr ake outer khatam ho gya 
+  //inner return krne se sirf inner nhi jaa rha balki uska pura lexical scope ja rha hai 
+  //  ise hua kya ise hua ye ki count hoga abhi bhi memory mai
+}
+
+const fn = outer();
+
+fn(); // 1
+fn(); // 2
+fn(); // 3
+/*
+Tu soch raha tha:
+
+"outer hat gaya to sab delete ho jana chahiye"
+
+👉 Nahi bhai
+JS garbage collector itna bewakoof nahi hai 😂
+
+👉 Rule:
+
+Jab tak kisi variable ka reference hai → wo memory me rahega
+*/
+
+
+</script>
+</html>

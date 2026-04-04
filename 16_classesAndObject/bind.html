@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>
+        Button Clicked
+    </button>
+    
+</body>
+<script>
+    // The bind method in JavaScript is a powerful tool that allows you to create a new function with a specific this value and initial arguments. This method is particularly useful when dealing with callbacks and ensuring that the correct context is maintained.
+    class React {
+        constructor(){
+            this.library = "Ract";
+            this.server = "https://localhost:300"
+            // requirement 
+            // button ka reff mil jaye and click krne pe kuch ho
+            document
+                .querySelector('button')
+                .addEventListener('click' , this.handleClick.bind(this))
+                // ye bina bind ke kyun nhi ch rha hai
+// bind ke bina this = button ban raha hai
+// 👉 button ke andar server property hoti hi nahi
+// 👉 isliye tu this.server access nahi kar paa raha;
+
+        }
+        handleClick(){
+            console.log("button Clicked");
+            console.log(this.server);
+        }
+    }
+    const app = new React();
+
+
+</script>
+<!--  
+breakdown
+document
+  .querySelector('button')
+  .addEventListener('click', this.handleClick);
+
+👉 Tu kya kar raha hai?
+
+button select kiya ✔️
+event listener lagaya ✔️
+
+BUT…
+
+👉 function ko kaun call karega?
+👉 browser / button
+
+💀 Internally kya hota hai
+
+Jab tu click karta hai:
+
+button.addEventListener('click', someFunction);
+
+👉 browser internally aise karta hai:
+
+button.someFunction();
+haa to isse hua kya 
+"Function apni jagah pe hai, par uska connection (this) class se toot ja raha hai"
+Context (this) = lost
+
+to hmm dekh rhe hai button ke pass this.server ka acess nhi hai this me uske pass pura ka pura button hai 
+
+to krana kya hoga yaha pr bind picture me atta hai 
+
+Bind kya karta hai
+this.handleClick.bind(this)
+
+👉 ye bolta hai:
+
+"Bhai tu kisi ko bhi function de de… par iska asli malik main hi rahunga"
+
+
+Kab zarurat padti hai bind ki?
+
+👉 Jab tu function ko direct call nahi kar raha hota, balki kisi aur ko de raha hota hai
+
+Jaise:
+
+event listener
+setTimeout
+callbacks
+
+*/
+-->
+</html>
